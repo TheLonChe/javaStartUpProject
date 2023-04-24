@@ -10,10 +10,6 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
 
-    public WebElement getSignInTitle() {
-        return Utils.waitForElementPresence(getDriver(), By.cssSelector("header[class='signin-signup-form__title'] h2[class='imprint imprint-en']"),5);
-    }
-
     public static WebElement getUsernameField() {
         return Utils.waitForElementPresence(getDriver(), By.id("signInName"),5);
     }
@@ -37,11 +33,9 @@ public class LoginPage extends BasePage {
     }
     @Test
     public void loginTeamAdmin() {
-        loginUser("nikola.loncar@argusdatainsights.ch", "Eb194pDF1");
+        loginUser("yourUsername", "yourPassword");
         Assertions.assertTrue(Pages.sideBarPage.getCompanyNewsTab().isDisplayed());
     }
-    public void loginTeamMember() {
-        loginUser("nikola.loncar@itengine.rs", "Eb194pDF1");
-        Assertions.assertTrue(Pages.sideBarPage.getCompanyNewsTab().isDisplayed());
-    }
+  
+ 
 }
