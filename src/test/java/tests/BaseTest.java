@@ -11,7 +11,7 @@ import java.time.Duration;
 public class BaseTest {
 
     // ""Sic Parvis Magna""
-    public static String baseUrl = "https://test-spot20-frontend-web.argusdatainsights.com/";
+    public static String baseUrl = "https://yourTargetURL.com/";
     private static WebDriver DRIVER;
     private static WebDriverWait WEB_DRIVER_WAIT;
     private static Actions ACTIONS;
